@@ -12,10 +12,26 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func checkIfFirstLaunch() {
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if UserDefaults.standard.bool(forKey: "HasLaunchedBefore") {
+            print("App has launched before")
+            let homePage = mainStoryboard.instantiateViewController(withIdentifier: "HomepageViewController") as! HomepageViewController
+            self.window?.rootViewController = homePage
+        } else {
+            print("This is the first launch ever!")
+            UserDefaults.standard.set(true, forKey: "HasLaunchedBefore")
+            UserDefaults.standard.synchronize()
+            let homePage = mainStoryboard.instantiateViewController(withIdentifier: "ChooseFavouriteTeamsViewController") as! ChooseFavouriteTeamsViewController
+            self.window?.rootViewController = homePage
+        }
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        checkIfFirstLaunch()
         return true
     }
 
