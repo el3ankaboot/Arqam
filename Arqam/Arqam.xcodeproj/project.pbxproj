@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5ECCFF8A226F3DCB00480545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFF89226F3DCB00480545 /* AppDelegate.swift */; };
+		5ECCFF8C226F3DCB00480545 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFF8B226F3DCB00480545 /* SegueViewController.swift */; };
+		5ECCFF8F226F3DCB00480545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF8D226F3DCB00480545 /* Main.storyboard */; };
+		5ECCFF91226F3DCF00480545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF90226F3DCF00480545 /* Assets.xcassets */; };
+		5ECCFF94226F3DCF00480545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF92226F3DCF00480545 /* LaunchScreen.storyboard */; };
+		5ECCFF9F226F41C600480545 /* ChooseFavouriteTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFF9E226F41C600480545 /* ChooseFavouriteTeamsViewController.swift */; };
+		5ECCFFA1226F41ED00480545 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA0226F41ED00480545 /* HomepageViewController.swift */; };
+		5ECCFFA3226F421500480545 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA2226F421500480545 /* TeamsViewController.swift */; };
+		5ECCFFA6226F423F00480545 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA5226F423F00480545 /* TeamDetailsViewController.swift */; };
+		5ECCFFA8226F426A00480545 /* CompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA7226F426A00480545 /* CompetitionsViewController.swift */; };
+		5ECCFFAA226F428A00480545 /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA9226F428A00480545 /* CompetitionViewController.swift */; };
+		5ECCFFAC226F42A900480545 /* TopScorersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */; };
+		5ECCFFAE226F42DA00480545 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */; };
+		5ECCFFB0226F42FA00480545 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAF226F42FA00480545 /* PlayerDetailsViewController.swift */; };
+		5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFB1226F441500480545 /* Arqam.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5ECCFF86226F3DCB00480545 /* Arqam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arqam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ECCFF89226F3DCB00480545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5ECCFF8B226F3DCB00480545 /* SegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
+		5ECCFF8E226F3DCB00480545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5ECCFF90226F3DCF00480545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5ECCFF93226F3DCF00480545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5ECCFF95226F3DCF00480545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ECCFF9E226F41C600480545 /* ChooseFavouriteTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseFavouriteTeamsViewController.swift; sourceTree = "<group>"; };
+		5ECCFFA0226F41ED00480545 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		5ECCFFA2226F421500480545 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		5ECCFFA5226F423F00480545 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		5ECCFFA7226F426A00480545 /* CompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsViewController.swift; sourceTree = "<group>"; };
+		5ECCFFA9226F428A00480545 /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
+		5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScorersViewController.swift; sourceTree = "<group>"; };
+		5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
+		5ECCFFAF226F42FA00480545 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		5ECCFFB2226F441500480545 /* Arqam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Arqam.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ECCFF83226F3DCB00480545 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5ECCFF7D226F3DCA00480545 = {
+			isa = PBXGroup;
+			children = (
+				5ECCFF88226F3DCB00480545 /* Arqam */,
+				5ECCFF87226F3DCB00480545 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5ECCFF87226F3DCB00480545 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ECCFF86226F3DCB00480545 /* Arqam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ECCFF88226F3DCB00480545 /* Arqam */ = {
+			isa = PBXGroup;
+			children = (
+				5ECCFF9B226F3DFA00480545 /* Model */,
+				5ECCFF9D226F3E1600480545 /* View */,
+				5ECCFF9C226F3E0A00480545 /* Controller */,
+				5ECCFF95226F3DCF00480545 /* Info.plist */,
+			);
+			path = Arqam;
+			sourceTree = "<group>";
+		};
+		5ECCFF9B226F3DFA00480545 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5ECCFF89226F3DCB00480545 /* AppDelegate.swift */,
+				5ECCFFB1226F441500480545 /* Arqam.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5ECCFF9C226F3E0A00480545 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5ECCFF9E226F41C600480545 /* ChooseFavouriteTeamsViewController.swift */,
+				5ECCFFA9226F428A00480545 /* CompetitionViewController.swift */,
+				5ECCFFA7226F426A00480545 /* CompetitionsViewController.swift */,
+				5ECCFFA0226F41ED00480545 /* HomepageViewController.swift */,
+				5ECCFFAF226F42FA00480545 /* PlayerDetailsViewController.swift */,
+				5ECCFF8B226F3DCB00480545 /* SegueViewController.swift */,
+				5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */,
+				5ECCFFA5226F423F00480545 /* TeamDetailsViewController.swift */,
+				5ECCFFA2226F421500480545 /* TeamsViewController.swift */,
+				5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5ECCFF9D226F3E1600480545 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5ECCFF8D226F3DCB00480545 /* Main.storyboard */,
+				5ECCFF90226F3DCF00480545 /* Assets.xcassets */,
+				5ECCFF92226F3DCF00480545 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ECCFF85226F3DCB00480545 /* Arqam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ECCFF98226F3DCF00480545 /* Build configuration list for PBXNativeTarget "Arqam" */;
+			buildPhases = (
+				5ECCFF82226F3DCB00480545 /* Sources */,
+				5ECCFF83226F3DCB00480545 /* Frameworks */,
+				5ECCFF84226F3DCB00480545 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Arqam;
+			productName = Arqam;
+			productReference = 5ECCFF86226F3DCB00480545 /* Arqam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ECCFF7E226F3DCA00480545 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = el3ankaboot;
+				TargetAttributes = {
+					5ECCFF85226F3DCB00480545 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 5ECCFF81226F3DCA00480545 /* Build configuration list for PBXProject "Arqam" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5ECCFF7D226F3DCA00480545;
+			productRefGroup = 5ECCFF87226F3DCB00480545 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ECCFF85226F3DCB00480545 /* Arqam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ECCFF84226F3DCB00480545 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ECCFF94226F3DCF00480545 /* LaunchScreen.storyboard in Resources */,
+				5ECCFF91226F3DCF00480545 /* Assets.xcassets in Resources */,
+				5ECCFF8F226F3DCB00480545 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ECCFF82226F3DCB00480545 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ECCFFA1226F41ED00480545 /* HomepageViewController.swift in Sources */,
+				5ECCFF8C226F3DCB00480545 /* SegueViewController.swift in Sources */,
+				5ECCFFAC226F42A900480545 /* TopScorersViewController.swift in Sources */,
+				5ECCFFB0226F42FA00480545 /* PlayerDetailsViewController.swift in Sources */,
+				5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */,
+				5ECCFFA8226F426A00480545 /* CompetitionsViewController.swift in Sources */,
+				5ECCFFAE226F42DA00480545 /* StandingsViewController.swift in Sources */,
+				5ECCFF9F226F41C600480545 /* ChooseFavouriteTeamsViewController.swift in Sources */,
+				5ECCFFAA226F428A00480545 /* CompetitionViewController.swift in Sources */,
+				5ECCFFA3226F421500480545 /* TeamsViewController.swift in Sources */,
+				5ECCFFA6226F423F00480545 /* TeamDetailsViewController.swift in Sources */,
+				5ECCFF8A226F3DCB00480545 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5ECCFF8D226F3DCB00480545 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ECCFF8E226F3DCB00480545 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5ECCFF92226F3DCF00480545 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ECCFF93226F3DCF00480545 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5ECCFF96226F3DCF00480545 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5ECCFF97226F3DCF00480545 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ECCFF99226F3DCF00480545 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J453HX9N2X;
+				INFOPLIST_FILE = Arqam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.el3ankaboot.Arqam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5ECCFF9A226F3DCF00480545 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J453HX9N2X;
+				INFOPLIST_FILE = Arqam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.el3ankaboot.Arqam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ECCFF81226F3DCA00480545 /* Build configuration list for PBXProject "Arqam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECCFF96226F3DCF00480545 /* Debug */,
+				5ECCFF97226F3DCF00480545 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ECCFF98226F3DCF00480545 /* Build configuration list for PBXNativeTarget "Arqam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECCFF99226F3DCF00480545 /* Debug */,
+				5ECCFF9A226F3DCF00480545 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5ECCFFB1226F441500480545 /* Arqam.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5ECCFFB2226F441500480545 /* Arqam.xcdatamodel */,
+			);
+			currentVersion = 5ECCFFB2226F441500480545 /* Arqam.xcdatamodel */;
+			path = Arqam.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5ECCFF7E226F3DCA00480545 /* Project object */;
+}
