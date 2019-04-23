@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E565A17226F73E700A050C9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A16226F73E700A050C9 /* DataController.swift */; };
 		5ECCFF8A226F3DCB00480545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFF89226F3DCB00480545 /* AppDelegate.swift */; };
 		5ECCFF8F226F3DCB00480545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF8D226F3DCB00480545 /* Main.storyboard */; };
 		5ECCFF91226F3DCF00480545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF90226F3DCF00480545 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		200EAD996B2216B9267056DD /* Pods-Arqam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arqam.release.xcconfig"; path = "Target Support Files/Pods-Arqam/Pods-Arqam.release.xcconfig"; sourceTree = "<group>"; };
+		5E565A16226F73E700A050C9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		5ECCFF86226F3DCB00480545 /* Arqam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arqam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECCFF89226F3DCB00480545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECCFF8E226F3DCB00480545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				5ECCFF89226F3DCB00480545 /* AppDelegate.swift */,
 				5ECCFFB1226F441500480545 /* Arqam.xcdatamodeld */,
+				5E565A16226F73E700A050C9 /* DataController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ECCFFA1226F41ED00480545 /* HomepageViewController.swift in Sources */,
+				5E565A17226F73E700A050C9 /* DataController.swift in Sources */,
 				5ECCFFAC226F42A900480545 /* TopScorersViewController.swift in Sources */,
 				5ECCFFB0226F42FA00480545 /* PlayerDetailsViewController.swift in Sources */,
 				5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */,
