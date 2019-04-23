@@ -1,0 +1,6 @@
+framework module Pods_Arqam {
+  umbrella header "Pods-Arqam-umbrella.h"
+
+  export *
+  module * { export * }
+}

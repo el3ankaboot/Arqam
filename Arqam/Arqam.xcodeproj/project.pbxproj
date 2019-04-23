@@ -22,9 +22,11 @@
 		5ECCFFAE226F42DA00480545 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */; };
 		5ECCFFB0226F42FA00480545 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAF226F42FA00480545 /* PlayerDetailsViewController.swift */; };
 		5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFB1226F441500480545 /* Arqam.xcdatamodeld */; };
+		A208A4E75C661796C9CB9554 /* Pods_Arqam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA70BF380187DE957BF8039D /* Pods_Arqam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200EAD996B2216B9267056DD /* Pods-Arqam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arqam.release.xcconfig"; path = "Target Support Files/Pods-Arqam/Pods-Arqam.release.xcconfig"; sourceTree = "<group>"; };
 		5ECCFF86226F3DCB00480545 /* Arqam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arqam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECCFF89226F3DCB00480545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECCFF8B226F3DCB00480545 /* SegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 		5ECCFFAF226F42FA00480545 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 		5ECCFFB2226F441500480545 /* Arqam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Arqam.xcdatamodel; sourceTree = "<group>"; };
+		D393671F33FE22F4BEC084E0 /* Pods-Arqam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arqam.debug.xcconfig"; path = "Target Support Files/Pods-Arqam/Pods-Arqam.debug.xcconfig"; sourceTree = "<group>"; };
+		FA70BF380187DE957BF8039D /* Pods_Arqam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arqam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A208A4E75C661796C9CB9554 /* Pods_Arqam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,8 @@
 			children = (
 				5ECCFF88226F3DCB00480545 /* Arqam */,
 				5ECCFF87226F3DCB00480545 /* Products */,
+				8CFCFD3BA55EE40F2D0FE45C /* Pods */,
+				827B9303E9F0927F4BC9CFC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +125,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		827B9303E9F0927F4BC9CFC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA70BF380187DE957BF8039D /* Pods_Arqam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CFCFD3BA55EE40F2D0FE45C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D393671F33FE22F4BEC084E0 /* Pods-Arqam.debug.xcconfig */,
+				200EAD996B2216B9267056DD /* Pods-Arqam.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ECCFF98226F3DCF00480545 /* Build configuration list for PBXNativeTarget "Arqam" */;
 			buildPhases = (
+				B51F2FD95F57F585FE041B6D /* [CP] Check Pods Manifest.lock */,
 				5ECCFF82226F3DCB00480545 /* Sources */,
 				5ECCFF83226F3DCB00480545 /* Frameworks */,
 				5ECCFF84226F3DCB00480545 /* Resources */,
+				6D54A8E843C94E0A0ED4B4DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D54A8E843C94E0A0ED4B4DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Arqam/Pods-Arqam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Arqam/Pods-Arqam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B51F2FD95F57F585FE041B6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Arqam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5ECCFF82226F3DCB00480545 /* Sources */ = {
@@ -344,6 +420,7 @@
 		};
 		5ECCFF99226F3DCF00480545 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D393671F33FE22F4BEC084E0 /* Pods-Arqam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -363,6 +440,7 @@
 		};
 		5ECCFF9A226F3DCF00480545 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 200EAD996B2216B9267056DD /* Pods-Arqam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
