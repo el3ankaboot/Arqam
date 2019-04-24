@@ -23,6 +23,7 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
     
     //MARK: Instance Variables
     var allTeams: [Team] = []
+    var chosenTeams: [Team] = []
     
     //MARK: View Did Load
     override func viewDidLoad() {
@@ -45,6 +46,7 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
 
         
     }//closing of ViewDidLoad
+        
    
     //MARK: Load All Teams
     func getAllTeams(league: String) {
@@ -122,7 +124,45 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
         let team = allTeams[(indexPath as NSIndexPath).row]
         let teamCell = tableView.dequeueReusableCell(withIdentifier: "teamCell") as! UITableViewCell
         teamCell.textLabel?.text = team.name
+        teamCell.textLabel?.textColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 1)
+        teamCell.layer.borderWidth = 5
+        teamCell.layer.borderColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 0.6).cgColor
+        teamCell.clipsToBounds = true
         return teamCell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let team = allTeams[(indexPath as NSIndexPath).row]
+        let isRemovingTeam = chosenTeams.contains { (teamCheck) -> Bool in
+            if teamCheck.name == team.name {return true}
+            else {return false}
+        }
+        let teamCell :UITableViewCell = teamsTable.cellForRow(at: indexPath)!
+        if(isRemovingTeam){
+            for (index, t) in chosenTeams.enumerated() {
+                if t.name == team.name{chosenTeams.remove(at: index)}
+            }
+            teamCell.backgroundColor = UIColor.white
+            teamCell.textLabel?.textColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 1)
+            if(chosenTeams.count==0){doneButton.isHidden = true}
+        }
+        else {
+            chosenTeams.append(team)
+            teamCell.backgroundColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 1)
+            teamCell.textLabel?.textColor = UIColor.white
+            doneButton.isHidden = false
+        }
+        teamsTable.deselectRow(at: indexPath, animated: false)
+    }
+    
+    //MARK: Prepare for segue to confirm favourite teams
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "confirmFavSegue"{
+            let destinationViewController = segue.destination as? ConfirmFavouriteTeamsViewController
+            destinationViewController?.dataController = self.dataController
+            destinationViewController?.chosenTeams = self.chosenTeams
+        }
     }
     
 }//closing of class
+
+
