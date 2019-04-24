@@ -11,5 +11,8 @@ import UIKit
 
 class TeamDetailsViewController : UIViewController {
     
+    //MARK: Injections
+    var dataController : DataController!
+    
 }
 

@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		5E565A17226F73E700A050C9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A16226F73E700A050C9 /* DataController.swift */; };
+		5E565A19226F7C0F00A050C9 /* FootballDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A18226F7C0F00A050C9 /* FootballDataClient.swift */; };
+		5E565A1D2270589C00A050C9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A1C2270589C00A050C9 /* Team.swift */; };
+		5E565A1F2270600500A050C9 /* LeaguesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A1E2270600500A050C9 /* LeaguesEnum.swift */; };
 		5ECCFF8A226F3DCB00480545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFF89226F3DCB00480545 /* AppDelegate.swift */; };
 		5ECCFF8F226F3DCB00480545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF8D226F3DCB00480545 /* Main.storyboard */; };
 		5ECCFF91226F3DCF00480545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF90226F3DCF00480545 /* Assets.xcassets */; };
 		5ECCFF94226F3DCF00480545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF92226F3DCF00480545 /* LaunchScreen.storyboard */; };
 		5ECCFF9F226F41C600480545 /* ChooseFavouriteTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFF9E226F41C600480545 /* ChooseFavouriteTeamsViewController.swift */; };
 		5ECCFFA1226F41ED00480545 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA0226F41ED00480545 /* HomepageViewController.swift */; };
-		5ECCFFA3226F421500480545 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA2226F421500480545 /* TeamsViewController.swift */; };
+		5ECCFFA3226F421500480545 /* FavouriteTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA2226F421500480545 /* FavouriteTeamsViewController.swift */; };
 		5ECCFFA6226F423F00480545 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA5226F423F00480545 /* TeamDetailsViewController.swift */; };
 		5ECCFFA8226F426A00480545 /* CompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA7226F426A00480545 /* CompetitionsViewController.swift */; };
 		5ECCFFAA226F428A00480545 /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFA9226F428A00480545 /* CompetitionViewController.swift */; };
 		5ECCFFAC226F42A900480545 /* TopScorersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */; };
 		5ECCFFAE226F42DA00480545 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */; };
-		5ECCFFB0226F42FA00480545 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAF226F42FA00480545 /* PlayerDetailsViewController.swift */; };
 		5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFB1226F441500480545 /* Arqam.xcdatamodeld */; };
 		A208A4E75C661796C9CB9554 /* Pods_Arqam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA70BF380187DE957BF8039D /* Pods_Arqam.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,9 @@
 /* Begin PBXFileReference section */
 		200EAD996B2216B9267056DD /* Pods-Arqam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arqam.release.xcconfig"; path = "Target Support Files/Pods-Arqam/Pods-Arqam.release.xcconfig"; sourceTree = "<group>"; };
 		5E565A16226F73E700A050C9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		5E565A18226F7C0F00A050C9 /* FootballDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballDataClient.swift; sourceTree = "<group>"; };
+		5E565A1C2270589C00A050C9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		5E565A1E2270600500A050C9 /* LeaguesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesEnum.swift; sourceTree = "<group>"; };
 		5ECCFF86226F3DCB00480545 /* Arqam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arqam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECCFF89226F3DCB00480545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECCFF8E226F3DCB00480545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,13 +41,12 @@
 		5ECCFF95226F3DCF00480545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ECCFF9E226F41C600480545 /* ChooseFavouriteTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseFavouriteTeamsViewController.swift; sourceTree = "<group>"; };
 		5ECCFFA0226F41ED00480545 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
-		5ECCFFA2226F421500480545 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		5ECCFFA2226F421500480545 /* FavouriteTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTeamsViewController.swift; sourceTree = "<group>"; };
 		5ECCFFA5226F423F00480545 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		5ECCFFA7226F426A00480545 /* CompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsViewController.swift; sourceTree = "<group>"; };
 		5ECCFFA9226F428A00480545 /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 		5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScorersViewController.swift; sourceTree = "<group>"; };
 		5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
-		5ECCFFAF226F42FA00480545 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 		5ECCFFB2226F441500480545 /* Arqam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Arqam.xcdatamodel; sourceTree = "<group>"; };
 		D393671F33FE22F4BEC084E0 /* Pods-Arqam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arqam.debug.xcconfig"; path = "Target Support Files/Pods-Arqam/Pods-Arqam.debug.xcconfig"; sourceTree = "<group>"; };
 		FA70BF380187DE957BF8039D /* Pods_Arqam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arqam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E565A1B2270588F00A050C9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5E565A1C2270589C00A050C9 /* Team.swift */,
+				5E565A1E2270600500A050C9 /* LeaguesEnum.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		5ECCFF7D226F3DCA00480545 = {
 			isa = PBXGroup;
 			children = (
@@ -92,9 +105,11 @@
 		5ECCFF9B226F3DFA00480545 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E565A1B2270588F00A050C9 /* Classes */,
 				5ECCFF89226F3DCB00480545 /* AppDelegate.swift */,
 				5ECCFFB1226F441500480545 /* Arqam.xcdatamodeld */,
 				5E565A16226F73E700A050C9 /* DataController.swift */,
+				5E565A18226F7C0F00A050C9 /* FootballDataClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,11 +120,10 @@
 				5ECCFF9E226F41C600480545 /* ChooseFavouriteTeamsViewController.swift */,
 				5ECCFFA9226F428A00480545 /* CompetitionViewController.swift */,
 				5ECCFFA7226F426A00480545 /* CompetitionsViewController.swift */,
+				5ECCFFA2226F421500480545 /* FavouriteTeamsViewController.swift */,
 				5ECCFFA0226F41ED00480545 /* HomepageViewController.swift */,
-				5ECCFFAF226F42FA00480545 /* PlayerDetailsViewController.swift */,
 				5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */,
 				5ECCFFA5226F423F00480545 /* TeamDetailsViewController.swift */,
-				5ECCFFA2226F421500480545 /* TeamsViewController.swift */,
 				5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */,
 			);
 			path = Controller;
@@ -266,16 +280,18 @@
 			files = (
 				5ECCFFA1226F41ED00480545 /* HomepageViewController.swift in Sources */,
 				5E565A17226F73E700A050C9 /* DataController.swift in Sources */,
+				5E565A1D2270589C00A050C9 /* Team.swift in Sources */,
+				5E565A1F2270600500A050C9 /* LeaguesEnum.swift in Sources */,
 				5ECCFFAC226F42A900480545 /* TopScorersViewController.swift in Sources */,
-				5ECCFFB0226F42FA00480545 /* PlayerDetailsViewController.swift in Sources */,
 				5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */,
 				5ECCFFA8226F426A00480545 /* CompetitionsViewController.swift in Sources */,
 				5ECCFFAE226F42DA00480545 /* StandingsViewController.swift in Sources */,
 				5ECCFF9F226F41C600480545 /* ChooseFavouriteTeamsViewController.swift in Sources */,
 				5ECCFFAA226F428A00480545 /* CompetitionViewController.swift in Sources */,
-				5ECCFFA3226F421500480545 /* TeamsViewController.swift in Sources */,
+				5ECCFFA3226F421500480545 /* FavouriteTeamsViewController.swift in Sources */,
 				5ECCFFA6226F423F00480545 /* TeamDetailsViewController.swift in Sources */,
 				5ECCFF8A226F3DCB00480545 /* AppDelegate.swift in Sources */,
+				5E565A19226F7C0F00A050C9 /* FootballDataClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

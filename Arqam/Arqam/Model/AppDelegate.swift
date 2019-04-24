@@ -13,6 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    let dataController = DataController(modelName: "Arqam")
+    
+    //MARK: Check which page to navigate to
+    //Using Simple Persistence to check if first time launch or not
+    //If first time it will navigate to page asking for favourite teams
+    //If it was loaded before it will navigate to the home page.
     func checkIfFirstLaunch() {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         if UserDefaults.standard.bool(forKey: "HasLaunchedBefore") {
@@ -31,7 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        checkIfFirstLaunch()
+        
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let homePage = mainStoryboard.instantiateViewController(withIdentifier: "ChooseFavouriteTeamsViewController") as! ChooseFavouriteTeamsViewController
+        self.window?.rootViewController = homePage
+        //checkIfFirstLaunch()
         return true
     }
 

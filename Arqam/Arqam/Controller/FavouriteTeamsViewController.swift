@@ -1,5 +1,5 @@
 //
-//  HomepageViewController.swift
+//  FavouriteTeamsViewController.swift
 //  Arqam
 //
 //  Created by Gamal Gamaleldin on 4/23/19.
@@ -9,11 +9,10 @@
 import Foundation
 import UIKit
 
-class HomepageViewController : UIViewController {
+class FavouriteTeamsViewController : UIViewController {
+    
     //MARK: Injections
     var dataController : DataController!
     
-    
-    
-
 }
+
