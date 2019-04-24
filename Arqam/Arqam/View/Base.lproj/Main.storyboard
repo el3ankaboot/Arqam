@@ -165,24 +165,52 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="usM-i5-nCc">
                                 <rect key="frame" x="75" y="20" width="20" height="50"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykM-bL-zZI">
+                                <rect key="frame" x="320" y="30" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oZL-lv-4Eg">
+                                <rect key="frame" x="15" y="78" width="345" height="579"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamCell" id="JqY-xW-EcI">
+                                        <rect key="frame" x="0.0" y="28" width="345" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JqY-xW-EcI" id="GdL-Uq-lwY">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ykM-bL-zZI" firstAttribute="centerY" secondItem="jsG-tH-DsG" secondAttribute="centerY" id="1Qr-vg-mjl"/>
                             <constraint firstItem="jsG-tH-DsG" firstAttribute="centerX" secondItem="XBs-TA-x6I" secondAttribute="centerX" id="2tT-2a-p1o"/>
                             <constraint firstItem="jsG-tH-DsG" firstAttribute="top" secondItem="XBs-TA-x6I" secondAttribute="top" id="7l0-Eg-cYT"/>
                             <constraint firstItem="usM-i5-nCc" firstAttribute="trailing" secondItem="jsG-tH-DsG" secondAttribute="leading" constant="-7.5" id="9iN-MJ-JlF"/>
                             <constraint firstItem="usM-i5-nCc" firstAttribute="centerY" secondItem="jsG-tH-DsG" secondAttribute="centerY" id="AmC-og-ZJW"/>
                             <constraint firstItem="XBs-TA-x6I" firstAttribute="bottom" secondItem="421-j3-LJh" secondAttribute="bottom" id="Bcp-xM-AbK"/>
                             <constraint firstItem="421-j3-LJh" firstAttribute="leading" secondItem="XBs-TA-x6I" secondAttribute="leading" id="Dmd-pE-7Hx"/>
+                            <constraint firstItem="oZL-lv-4Eg" firstAttribute="top" secondItem="jsG-tH-DsG" secondAttribute="bottom" constant="8" id="HF5-Jk-Gk0"/>
                             <constraint firstItem="XBs-TA-x6I" firstAttribute="trailing" secondItem="421-j3-LJh" secondAttribute="trailing" id="Na9-eM-eYn"/>
+                            <constraint firstItem="XBs-TA-x6I" firstAttribute="bottom" secondItem="oZL-lv-4Eg" secondAttribute="bottom" constant="10" id="aiW-HA-Y50"/>
+                            <constraint firstItem="ykM-bL-zZI" firstAttribute="leading" secondItem="XBs-TA-x6I" secondAttribute="trailing" constant="-55" id="gWk-Y1-wCH"/>
                             <constraint firstItem="421-j3-LJh" firstAttribute="top" secondItem="Zv8-HF-TB7" secondAttribute="top" id="iVV-2Q-9dN"/>
                             <constraint firstItem="usM-i5-nCc" firstAttribute="top" secondItem="jsG-tH-DsG" secondAttribute="top" id="vUo-8g-1jK"/>
+                            <constraint firstItem="oZL-lv-4Eg" firstAttribute="leading" secondItem="XBs-TA-x6I" secondAttribute="leading" constant="15" id="vVE-K6-0HI"/>
+                            <constraint firstItem="XBs-TA-x6I" firstAttribute="trailing" secondItem="oZL-lv-4Eg" secondAttribute="trailing" constant="15" id="yFc-Yx-c0t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XBs-TA-x6I"/>
                     </view>
                     <connections>
                         <outlet property="activity" destination="usM-i5-nCc" id="Oum-vC-avd"/>
                         <outlet property="chooseLeague" destination="jsG-tH-DsG" id="2WE-i5-StK"/>
+                        <outlet property="doneButton" destination="ykM-bL-zZI" id="y48-ii-03T"/>
+                        <outlet property="teamsTable" destination="oZL-lv-4Eg" id="yT2-Vf-Dxg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dME-Rh-t3F" userLabel="First Responder" sceneMemberID="firstResponder"/>

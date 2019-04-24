@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegate , UIPickerViewDataSource {
+class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegate , UIPickerViewDataSource , UITableViewDelegate , UITableViewDataSource {
     
     
     //MARK: Injections
@@ -18,7 +18,11 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
     //MARK: Outlets
     @IBOutlet weak var chooseLeague: UITextField!
     @IBOutlet weak var activity: UIActivityIndicatorView!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var teamsTable: UITableView!
     
+    //MARK: Instance Variables
+    var allTeams: [Team] = []
     
     //MARK: View Did Load
     override func viewDidLoad() {
@@ -29,6 +33,15 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
         
         //hiding activity indicator
         activity.isHidden = true
+        
+        //hide the Done button at beggining of app
+        doneButton.isHidden = true
+        
+        //Table view
+        teamsTable.isHidden = true
+        teamsTable.tableFooterView = UIView()
+        teamsTable.delegate = self
+        teamsTable.dataSource = self
 
         
     }//closing of ViewDidLoad
@@ -51,9 +64,9 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
                 return
             }
             let teams = teamsReturned.sorted(by: {$0.name < $1.name})
-            for team in teams {
-                print(team.name)
-            }
+            self.allTeams = teams
+            self.teamsTable.isHidden = false
+            self.teamsTable.reloadData()
         }//closing of func call
     } //closing of func getAllTeams
  
@@ -99,6 +112,17 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return (leagues[row].userValue)
+    }
+    
+    //MARK: Teams Table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.allTeams.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let team = allTeams[(indexPath as NSIndexPath).row]
+        let teamCell = tableView.dequeueReusableCell(withIdentifier: "teamCell") as! UITableViewCell
+        teamCell.textLabel?.text = team.name
+        return teamCell
     }
     
 }//closing of class
