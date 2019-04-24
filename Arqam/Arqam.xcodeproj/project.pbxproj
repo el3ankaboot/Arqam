@@ -11,6 +11,7 @@
 		5E565A19226F7C0F00A050C9 /* FootballDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A18226F7C0F00A050C9 /* FootballDataClient.swift */; };
 		5E565A1D2270589C00A050C9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A1C2270589C00A050C9 /* Team.swift */; };
 		5E565A1F2270600500A050C9 /* LeaguesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A1E2270600500A050C9 /* LeaguesEnum.swift */; };
+		5E565A212270695800A050C9 /* View Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E565A202270695800A050C9 /* View Extension.swift */; };
 		5ECCFF8A226F3DCB00480545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFF89226F3DCB00480545 /* AppDelegate.swift */; };
 		5ECCFF8F226F3DCB00480545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF8D226F3DCB00480545 /* Main.storyboard */; };
 		5ECCFF91226F3DCF00480545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF90226F3DCF00480545 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		5E565A18226F7C0F00A050C9 /* FootballDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballDataClient.swift; sourceTree = "<group>"; };
 		5E565A1C2270589C00A050C9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		5E565A1E2270600500A050C9 /* LeaguesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesEnum.swift; sourceTree = "<group>"; };
+		5E565A202270695800A050C9 /* View Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Extension.swift"; sourceTree = "<group>"; };
 		5ECCFF86226F3DCB00480545 /* Arqam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arqam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECCFF89226F3DCB00480545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECCFF8E226F3DCB00480545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				5ECCFF8D226F3DCB00480545 /* Main.storyboard */,
 				5ECCFF90226F3DCF00480545 /* Assets.xcassets */,
 				5ECCFF92226F3DCF00480545 /* LaunchScreen.storyboard */,
+				5E565A202270695800A050C9 /* View Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				5ECCFFA1226F41ED00480545 /* HomepageViewController.swift in Sources */,
 				5E565A17226F73E700A050C9 /* DataController.swift in Sources */,
 				5E565A1D2270589C00A050C9 /* Team.swift in Sources */,
+				5E565A212270695800A050C9 /* View Extension.swift in Sources */,
 				5E565A1F2270600500A050C9 /* LeaguesEnum.swift in Sources */,
 				5ECCFFAC226F42A900480545 /* TopScorersViewController.swift in Sources */,
 				5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */,

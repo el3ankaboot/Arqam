@@ -19,7 +19,7 @@ class FootballDataClient {
         //Base URL
         static let baseURL = "https://api.football-data.org/v2"
         
-        //Enum cases
+        //Enum's cases
         case getAllTeams(String)
    
         //String values for enum cases
@@ -28,7 +28,7 @@ class FootballDataClient {
             case .getAllTeams(let league) :
                 return Endpoints.baseURL + "/competitions/\(league)/teams"
 
-            }//closing od switch
+            }//closing of switch
         }//closing of stringValue
         
         

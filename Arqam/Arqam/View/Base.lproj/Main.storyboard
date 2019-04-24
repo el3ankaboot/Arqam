@@ -135,13 +135,62 @@
                     <view key="view" contentMode="scaleToFill" id="Zv8-HF-TB7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="421-j3-LJh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose League" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsG-tH-DsG">
+                                <rect key="frame" x="102.5" y="20" width="170" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.71499999999999997" blue="0.22600000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.0" green="0.71499999999999997" blue="0.22600000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="f9T-su-6MS"/>
+                                    <constraint firstAttribute="height" constant="50" id="gmM-V3-oTp"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="usM-i5-nCc">
+                                <rect key="frame" x="75" y="20" width="20" height="50"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jsG-tH-DsG" firstAttribute="centerX" secondItem="XBs-TA-x6I" secondAttribute="centerX" id="2tT-2a-p1o"/>
+                            <constraint firstItem="jsG-tH-DsG" firstAttribute="top" secondItem="XBs-TA-x6I" secondAttribute="top" id="7l0-Eg-cYT"/>
+                            <constraint firstItem="usM-i5-nCc" firstAttribute="trailing" secondItem="jsG-tH-DsG" secondAttribute="leading" constant="-7.5" id="9iN-MJ-JlF"/>
+                            <constraint firstItem="usM-i5-nCc" firstAttribute="centerY" secondItem="jsG-tH-DsG" secondAttribute="centerY" id="AmC-og-ZJW"/>
+                            <constraint firstItem="XBs-TA-x6I" firstAttribute="bottom" secondItem="421-j3-LJh" secondAttribute="bottom" id="Bcp-xM-AbK"/>
+                            <constraint firstItem="421-j3-LJh" firstAttribute="leading" secondItem="XBs-TA-x6I" secondAttribute="leading" id="Dmd-pE-7Hx"/>
+                            <constraint firstItem="XBs-TA-x6I" firstAttribute="trailing" secondItem="421-j3-LJh" secondAttribute="trailing" id="Na9-eM-eYn"/>
+                            <constraint firstItem="421-j3-LJh" firstAttribute="top" secondItem="Zv8-HF-TB7" secondAttribute="top" id="iVV-2Q-9dN"/>
+                            <constraint firstItem="usM-i5-nCc" firstAttribute="top" secondItem="jsG-tH-DsG" secondAttribute="top" id="vUo-8g-1jK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XBs-TA-x6I"/>
                     </view>
+                    <connections>
+                        <outlet property="activity" destination="usM-i5-nCc" id="Oum-vC-avd"/>
+                        <outlet property="chooseLeague" destination="jsG-tH-DsG" id="2WE-i5-StK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dME-Rh-t3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="260" y="901"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundImage" width="960" height="720"/>
+    </resources>
 </document>
