@@ -26,6 +26,7 @@
 		5ECCFFAC226F42A900480545 /* TopScorersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */; };
 		5ECCFFAE226F42DA00480545 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */; };
 		5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFFB1226F441500480545 /* Arqam.xcdatamodeld */; };
+		5ECF8AF922723FB10057E118 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF8AF822723FB10057E118 /* WelcomeViewController.swift */; };
 		A208A4E75C661796C9CB9554 /* Pods_Arqam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA70BF380187DE957BF8039D /* Pods_Arqam.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScorersViewController.swift; sourceTree = "<group>"; };
 		5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 		5ECCFFB2226F441500480545 /* Arqam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Arqam.xcdatamodel; sourceTree = "<group>"; };
+		5ECF8AF822723FB10057E118 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D393671F33FE22F4BEC084E0 /* Pods-Arqam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arqam.debug.xcconfig"; path = "Target Support Files/Pods-Arqam/Pods-Arqam.debug.xcconfig"; sourceTree = "<group>"; };
 		FA70BF380187DE957BF8039D /* Pods_Arqam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arqam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 				5ECCFFAD226F42DA00480545 /* StandingsViewController.swift */,
 				5ECCFFA5226F423F00480545 /* TeamDetailsViewController.swift */,
 				5ECCFFAB226F42A900480545 /* TopScorersViewController.swift */,
+				5ECF8AF822723FB10057E118 /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				5E565A17226F73E700A050C9 /* DataController.swift in Sources */,
 				5E565A1D2270589C00A050C9 /* Team.swift in Sources */,
 				5E565A212270695800A050C9 /* View Extension.swift in Sources */,
+				5ECF8AF922723FB10057E118 /* WelcomeViewController.swift in Sources */,
 				5E565A1F2270600500A050C9 /* LeaguesEnum.swift in Sources */,
 				5ECCFFAC226F42A900480545 /* TopScorersViewController.swift in Sources */,
 				5ECCFFB3226F441500480545 /* Arqam.xcdatamodeld in Sources */,

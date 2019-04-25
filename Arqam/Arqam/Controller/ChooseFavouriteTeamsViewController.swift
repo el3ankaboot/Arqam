@@ -24,6 +24,19 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
     //MARK: Instance Variables
     var allTeams: [Team] = []
     var chosenTeams: [Team] = []
+    var showWelcomeMessage: Bool = true
+    
+    //MARK: View Did Appear
+    override func viewDidAppear(_ animated: Bool) {
+        //Present The Welcome Message
+        super.viewDidAppear(animated)
+        if (showWelcomeMessage){
+            let storyboard = UIStoryboard (name: "Main", bundle: nil)
+            let welcomeVC = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+            showWelcomeMessage = false
+            self.present(welcomeVC, animated: true, completion: nil)
+        }
+    }
     
     //MARK: View Did Load
     override func viewDidLoad() {

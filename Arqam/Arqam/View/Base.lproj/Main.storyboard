@@ -225,6 +225,84 @@
             </objects>
             <point key="canvasLocation" x="260" y="900.89955022488766"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="NQe-x6-jzi">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SYD-aB-p52" customClass="WelcomeViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Nz-x0-qVw" customClass="GradientView" customModule="Arqam" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTk-U3-K7A">
+                                <rect key="frame" x="10" y="323.5" width="355" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9o9-oa-Ncr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Proceed">
+                                    <color key="titleColor" red="0.0" green="0.71499999999999997" blue="0.22600000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="okay:" destination="SYD-aB-p52" eventType="touchUpInside" id="LAg-2e-KYD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Arqam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyQ-7a-YDD">
+                                <rect key="frame" x="106.5" y="190" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The first step is to choose your favourite team(s)." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hJI-c0-IAx">
+                                <rect key="frame" x="0.0" y="241" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MDf-6W-vUa"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hJI-c0-IAx" firstAttribute="top" secondItem="tyQ-7a-YDD" secondAttribute="bottom" constant="30" id="3aL-my-dy8"/>
+                            <constraint firstItem="kTk-U3-K7A" firstAttribute="centerX" secondItem="tyQ-7a-YDD" secondAttribute="centerX" id="5Dk-x9-FB4"/>
+                            <constraint firstItem="hJI-c0-IAx" firstAttribute="width" secondItem="4Nz-x0-qVw" secondAttribute="width" id="8eE-8k-dDo"/>
+                            <constraint firstItem="tyQ-7a-YDD" firstAttribute="top" secondItem="xUd-Pu-auq" secondAttribute="top" constant="170" id="Ldw-cw-eDc"/>
+                            <constraint firstItem="tyQ-7a-YDD" firstAttribute="centerX" secondItem="xUd-Pu-auq" secondAttribute="centerX" id="Uuz-oX-z0b"/>
+                            <constraint firstItem="kTk-U3-K7A" firstAttribute="width" secondItem="4Nz-x0-qVw" secondAttribute="width" constant="-20" id="WGV-S0-pMl"/>
+                            <constraint firstItem="hJI-c0-IAx" firstAttribute="leading" secondItem="xUd-Pu-auq" secondAttribute="leading" id="yK2-zJ-BWz"/>
+                            <constraint firstItem="kTk-U3-K7A" firstAttribute="centerY" secondItem="xUd-Pu-auq" secondAttribute="centerY" id="yvd-CT-IAC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xUd-Pu-auq"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.0" green="0.71541014570000006" blue="0.2262186014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.47099406933526677" green="0.81277522208121822" blue="0.11036752167367425" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.0040000000000000001" green="0.71541014570000006" blue="0.23407707359999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZo-qg-PCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356" y="1609.745127436282"/>
+        </scene>
         <!--Confirm Favourite Teams View Controller-->
         <scene sceneID="78l-uC-Fr7">
             <objects>
