@@ -71,15 +71,24 @@
                                     <constraint firstItem="PJn-lG-G7Q" firstAttribute="width" secondItem="toc-k5-JH6" secondAttribute="width" constant="-50" id="s2S-mp-lve"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Aei-Ka-dqt">
+                                <rect key="frame" x="37.5" y="66" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="78M-9Q-Np4"/>
+                                    <constraint firstAttribute="width" constant="300" id="y39-vY-z4f"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ylR-Aw-S9y" firstAttribute="leading" secondItem="pFv-cw-iCp" secondAttribute="leading" id="5e4-WP-6jE"/>
+                            <constraint firstItem="Aei-Ka-dqt" firstAttribute="centerX" secondItem="pFv-cw-iCp" secondAttribute="centerX" id="Ksg-XC-zoI"/>
                             <constraint firstItem="toc-k5-JH6" firstAttribute="centerY" secondItem="pFv-cw-iCp" secondAttribute="centerY" id="Lb6-Ut-6F1"/>
                             <constraint firstItem="ylR-Aw-S9y" firstAttribute="top" secondItem="ipF-VO-I3l" secondAttribute="top" id="OqZ-pP-cb0"/>
                             <constraint firstItem="toc-k5-JH6" firstAttribute="centerX" secondItem="pFv-cw-iCp" secondAttribute="centerX" id="TZ5-o4-hRr"/>
                             <constraint firstItem="pFv-cw-iCp" firstAttribute="bottom" secondItem="ylR-Aw-S9y" secondAttribute="bottom" id="V1M-5b-vVd"/>
                             <constraint firstItem="toc-k5-JH6" firstAttribute="width" secondItem="pFv-cw-iCp" secondAttribute="width" id="duI-DJ-xZT"/>
+                            <constraint firstItem="Aei-Ka-dqt" firstAttribute="top" secondItem="pFv-cw-iCp" secondAttribute="top" constant="46" id="fdJ-eG-bu4"/>
                             <constraint firstItem="pFv-cw-iCp" firstAttribute="trailing" secondItem="ylR-Aw-S9y" secondAttribute="trailing" id="kUL-og-FuQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pFv-cw-iCp"/>
@@ -127,7 +136,18 @@
                     <view key="view" contentMode="scaleToFill" id="DM3-sy-euZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="D4Y-8W-MbO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wWX-kc-bQ8" firstAttribute="trailing" secondItem="D4Y-8W-MbO" secondAttribute="trailing" id="P5F-Ua-QID"/>
+                            <constraint firstItem="wWX-kc-bQ8" firstAttribute="bottom" secondItem="D4Y-8W-MbO" secondAttribute="bottom" id="jMM-ng-HQ8"/>
+                            <constraint firstItem="D4Y-8W-MbO" firstAttribute="top" secondItem="DM3-sy-euZ" secondAttribute="top" id="qAo-gS-HnQ"/>
+                            <constraint firstItem="D4Y-8W-MbO" firstAttribute="leading" secondItem="wWX-kc-bQ8" secondAttribute="leading" id="xtG-IL-ufR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wWX-kc-bQ8"/>
                     </view>
                 </viewController>
@@ -454,5 +474,6 @@
     </scenes>
     <resources>
         <image name="backgroundImage" width="960" height="720"/>
+        <image name="logo" width="150" height="150"/>
     </resources>
 </document>
