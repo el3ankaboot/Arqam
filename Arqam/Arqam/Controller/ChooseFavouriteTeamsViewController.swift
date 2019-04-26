@@ -137,6 +137,7 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
         let team = allTeams[(indexPath as NSIndexPath).row]
         let teamCell = tableView.dequeueReusableCell(withIdentifier: "teamCell") as! UITableViewCell
         teamCell.textLabel?.text = team.name
+        teamCell.backgroundColor = UIColor.white
         teamCell.textLabel?.textColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 1)
         teamCell.layer.borderWidth = 5
         teamCell.layer.borderColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 0.6).cgColor
