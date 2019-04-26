@@ -11,5 +11,19 @@ import UIKit
 
 class CompetitionsViewController : UIViewController {
     
+    //MARK: Outlets
+    
+    
+    //MARK: Instance Variables
+    var leagues = Leagues.allValues
+    
+    //MARK: View Did Load
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+    
+
+    
 }
 

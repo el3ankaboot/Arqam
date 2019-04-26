@@ -71,7 +71,7 @@ class ConfirmFavouriteTeamsViewController : UIViewController , UITableViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "homePageSegue" {
             print(segue.destination)
-            var destinationNavController = segue.destination as! UINavigationController
+            let destinationNavController = segue.destination as! UINavigationController
             let destinationViewController = destinationNavController.topViewController as! HomepageViewController
             destinationViewController.dataController = self.dataController
         }//Closing of if condition

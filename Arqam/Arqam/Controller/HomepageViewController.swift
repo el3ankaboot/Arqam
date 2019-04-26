@@ -20,6 +20,10 @@ class HomepageViewController : UIViewController {
     }
     
     @IBAction func getFavouriteTeams(_ sender: Any) {
+        let favTeamsVC = self.storyboard!.instantiateViewController(withIdentifier: "FavouriteTeamsViewController") as! FavouriteTeamsViewController
+        favTeamsVC.dataController = self.dataController
+        self.navigationController!.pushViewController(favTeamsVC, animated: true)
+        
     }
     
     

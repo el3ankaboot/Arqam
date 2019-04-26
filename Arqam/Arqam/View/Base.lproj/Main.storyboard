@@ -124,14 +124,54 @@
         <!--Favourite Teams View Controller-->
         <scene sceneID="WYE-nm-fje">
             <objects>
-                <viewController id="jwF-kX-WBF" customClass="FavouriteTeamsViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavouriteTeamsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jwF-kX-WBF" customClass="FavouriteTeamsViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xZm-vv-VaJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="5pR-wY-Zr7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2p0-TY-IA8">
+                                <rect key="frame" x="20" y="70" width="335" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZAK-en-0uS"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favTeamCell" id="Exw-j3-aLp">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Exw-j3-aLp" id="TJR-4J-znq">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2p0-TY-IA8" firstAttribute="leading" secondItem="OeZ-Ka-VKf" secondAttribute="leading" constant="20" id="4AB-Lv-g4A"/>
+                            <constraint firstItem="OeZ-Ka-VKf" firstAttribute="bottom" secondItem="5pR-wY-Zr7" secondAttribute="bottom" id="EDC-ft-TeN"/>
+                            <constraint firstItem="2p0-TY-IA8" firstAttribute="top" secondItem="OeZ-Ka-VKf" secondAttribute="top" constant="50" id="FVk-kq-bmv"/>
+                            <constraint firstItem="5pR-wY-Zr7" firstAttribute="top" secondItem="xZm-vv-VaJ" secondAttribute="top" id="IaU-ZP-Hju"/>
+                            <constraint firstItem="OeZ-Ka-VKf" firstAttribute="trailing" secondItem="2p0-TY-IA8" secondAttribute="trailing" constant="20" id="TQq-E2-neY"/>
+                            <constraint firstItem="OeZ-Ka-VKf" firstAttribute="trailing" secondItem="5pR-wY-Zr7" secondAttribute="trailing" id="bQa-mR-lOC"/>
+                            <constraint firstItem="5pR-wY-Zr7" firstAttribute="leading" secondItem="OeZ-Ka-VKf" secondAttribute="leading" id="uCx-tB-IeQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OeZ-Ka-VKf"/>
                     </view>
                     <navigationItem key="navigationItem" id="WIQ-CQ-zdV"/>
+                    <connections>
+                        <outlet property="heightLayout" destination="ZAK-en-0uS" id="67j-DR-qla"/>
+                        <outlet property="tableView" destination="2p0-TY-IA8" id="ZRM-JJ-z1N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Q5-6P-D2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
