@@ -13,6 +13,14 @@ class HomepageViewController : UIViewController {
     //MARK: Injections
     var dataController : DataController!
     
+    //MARK: IBActions
+    @IBAction func getCompetitions(_ sender: Any) {
+        let competitionsVC = self.storyboard!.instantiateViewController(withIdentifier: "CompetitionsViewController") as! CompetitionsViewController
+        self.navigationController!.pushViewController(competitionsVC, animated: true)
+    }
+    
+    @IBAction func getFavouriteTeams(_ sender: Any) {
+    }
     
     
 

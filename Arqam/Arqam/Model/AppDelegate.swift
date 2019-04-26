@@ -23,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         if UserDefaults.standard.bool(forKey: "HasLaunchedBefore") {
             print("App has launched before")
+            let rootViewController = self.window!.rootViewController as! UINavigationController
             let homePage = mainStoryboard.instantiateViewController(withIdentifier: "HomepageViewController") as! HomepageViewController
-            self.window?.rootViewController = homePage
+            rootViewController.pushViewController(homePage, animated: true)
             homePage.dataController = dataController
         } else {
             print("This is the first launch ever!")
