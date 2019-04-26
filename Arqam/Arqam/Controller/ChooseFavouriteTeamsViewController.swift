@@ -41,7 +41,7 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //Setting the pickerview
         setupPickerView()
         

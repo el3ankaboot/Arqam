@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ConfirmFavouriteTeamsViewController : UIViewController , UITableViewDelegate , UITableViewDataSource{
     //MARK: Injections
@@ -53,7 +54,28 @@ class ConfirmFavouriteTeamsViewController : UIViewController , UITableViewDelega
     
     //MARK: Confirm
     @IBAction func confirm(_ sender: Any) {
+        convertTeamsToCoreData()
+        testCoreData()
         
+    }
+    func convertTeamsToCoreData(){
+        for team in chosenTeams {
+            let favTeam = FavTeam(context: dataController.viewContext)
+            favTeam.name = team.name
+            favTeam.tla = team.tla
+            favTeam.founded = Int32(team.founded)
+            favTeam.venue = team.venue
+            try? self.dataController.viewContext.save()
+        }//closing of for loop
+    }//closing of func convertTeamsToCoreData
+    
+    func testCoreData(){
+        let fetchRequest : NSFetchRequest<FavTeam> = FavTeam.fetchRequest()
+        if let result = try? dataController.viewContext.fetch(fetchRequest){
+            for r in result {
+                print(r.name)
+            }
+        }
     }
     
     
