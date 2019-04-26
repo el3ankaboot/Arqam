@@ -13,6 +13,15 @@ class TeamDetailsViewController : UIViewController {
     
     //MARK: Injections
     var dataController : DataController!
+    var theFavouriteTeam : FavTeam!
+    var isFavouriteTeam : Bool!
     
+    //MARK: View Did Load
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(dataController)
+        print(theFavouriteTeam)
+        print(isFavouriteTeam)
+    }
 }
 

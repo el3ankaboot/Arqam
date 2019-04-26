@@ -30,7 +30,6 @@ class FavouriteTeamsViewController : UIViewController,UITableViewDataSource , UI
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-        tableView.allowsSelection = false
         
         //fetch teams and reload the tableview's data
         fetchTeams()
@@ -67,9 +66,17 @@ class FavouriteTeamsViewController : UIViewController,UITableViewDataSource , UI
         return teamCell
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
+        //Because Last row was clipped.
         self.viewWillLayoutSubviews()
-    }//Because Last row was clipped.
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "TeamDetailsViewController") as! TeamDetailsViewController
+        detailController.theFavouriteTeam = self.favouriteTeams[(indexPath as NSIndexPath).row]
+        detailController.dataController = self.dataController
+        detailController.isFavouriteTeam = true
+        self.navigationController!.pushViewController(detailController, animated: true)
+    }
     
     
-}
+}//Closing of class
 
