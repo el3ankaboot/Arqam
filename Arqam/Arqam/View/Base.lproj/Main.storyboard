@@ -29,7 +29,59 @@
                     <view key="view" contentMode="scaleToFill" id="ipF-VO-I3l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-Aw-S9y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="toc-k5-JH6">
+                                <rect key="frame" x="0.0" y="262.5" width="375" height="162"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJn-lG-G7Q">
+                                        <rect key="frame" x="25" y="0.0" width="325" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.71499999999999997" blue="0.22600000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Rit-tq-yVN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Competitions">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcC-JA-6tP">
+                                        <rect key="frame" x="25" y="122" width="325" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.71499999999999997" blue="0.22600000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Favourite Teams">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AcC-JA-6tP" firstAttribute="width" secondItem="PJn-lG-G7Q" secondAttribute="width" id="6JI-Oo-4Cp"/>
+                                    <constraint firstItem="PJn-lG-G7Q" firstAttribute="width" secondItem="toc-k5-JH6" secondAttribute="width" constant="-50" id="s2S-mp-lve"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ylR-Aw-S9y" firstAttribute="leading" secondItem="pFv-cw-iCp" secondAttribute="leading" id="5e4-WP-6jE"/>
+                            <constraint firstItem="toc-k5-JH6" firstAttribute="centerY" secondItem="pFv-cw-iCp" secondAttribute="centerY" id="Lb6-Ut-6F1"/>
+                            <constraint firstItem="ylR-Aw-S9y" firstAttribute="top" secondItem="ipF-VO-I3l" secondAttribute="top" id="OqZ-pP-cb0"/>
+                            <constraint firstItem="toc-k5-JH6" firstAttribute="centerX" secondItem="pFv-cw-iCp" secondAttribute="centerX" id="TZ5-o4-hRr"/>
+                            <constraint firstItem="pFv-cw-iCp" firstAttribute="bottom" secondItem="ylR-Aw-S9y" secondAttribute="bottom" id="V1M-5b-vVd"/>
+                            <constraint firstItem="toc-k5-JH6" firstAttribute="width" secondItem="pFv-cw-iCp" secondAttribute="width" id="duI-DJ-xZT"/>
+                            <constraint firstItem="pFv-cw-iCp" firstAttribute="trailing" secondItem="ylR-Aw-S9y" secondAttribute="trailing" id="kUL-og-FuQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pFv-cw-iCp"/>
                     </view>
                 </viewController>
@@ -392,11 +444,12 @@
                     <connections>
                         <outlet property="tableHeight" destination="1ib-CZ-1LJ" id="ZtB-4i-Q7o"/>
                         <outlet property="tableView" destination="sM5-yw-6b3" id="sJS-OF-kQz"/>
+                        <segue destination="srg-Se-VSg" kind="show" identifier="homePageSegue" id="9in-6Z-k6K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOk-54-4U2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784.79999999999995" y="1605.2473763118442"/>
+            <point key="canvasLocation" x="820" y="1673"/>
         </scene>
     </scenes>
     <resources>

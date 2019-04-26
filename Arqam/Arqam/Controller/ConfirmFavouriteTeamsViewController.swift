@@ -24,10 +24,11 @@ class ConfirmFavouriteTeamsViewController : UIViewController , UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //setting delegate and data source of table view to self
+        //setting tableview properties
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.allowsSelection = false
     }
     
     //MARK: Setting Table Height According to elements
@@ -55,8 +56,7 @@ class ConfirmFavouriteTeamsViewController : UIViewController , UITableViewDelega
     //MARK: Confirm
     @IBAction func confirm(_ sender: Any) {
         convertTeamsToCoreData()
-        testCoreData()
-        
+        self.performSegue(withIdentifier: "homePageSegue", sender: self)
     }
     func convertTeamsToCoreData(){
         for team in chosenTeams {
@@ -68,15 +68,12 @@ class ConfirmFavouriteTeamsViewController : UIViewController , UITableViewDelega
             try? self.dataController.viewContext.save()
         }//closing of for loop
     }//closing of func convertTeamsToCoreData
-    
-    func testCoreData(){
-        let fetchRequest : NSFetchRequest<FavTeam> = FavTeam.fetchRequest()
-        if let result = try? dataController.viewContext.fetch(fetchRequest){
-            for r in result {
-                print(r.name)
-            }
-        }
-    }
-    
-    
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homePageSegue" {
+            let destinationViewController = segue.destination as? HomepageViewController
+            destinationViewController?.dataController = self.dataController
+        }//Closing of if condition
+    }//closing of prepare for segue func
+
+
+}//closing of class
