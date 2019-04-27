@@ -165,7 +165,7 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
             teamCell.textLabel?.textColor = UIColor.white
             doneButton.isHidden = false
         }
-        teamsTable.deselectRow(at: indexPath, animated: false)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
     //MARK: Prepare for segue to confirm favourite teams

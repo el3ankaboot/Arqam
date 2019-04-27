@@ -65,6 +65,7 @@ class ConfirmFavouriteTeamsViewController : UIViewController , UITableViewDelega
             favTeam.tla = team.tla
             favTeam.founded = Int32(team.founded)
             favTeam.venue = team.venue
+            favTeam.id = Int32(team.id)
             try? self.dataController.viewContext.save()
         }//closing of for loop
     }//closing of func convertTeamsToCoreData

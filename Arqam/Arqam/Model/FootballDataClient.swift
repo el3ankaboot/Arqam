@@ -67,7 +67,8 @@ class FootballDataClient {
                             let teamTLA = team["tla"].string ?? ""
                             let teamVenue = team["venue"].string ?? ""
                             let teamFounded = team["founded"].int ?? 0
-                            let teamToReturn = Team(name: teamName, tla: teamTLA , venue: teamVenue, founded: teamFounded)
+                            let teamID = team["id"].int ?? 0
+                            let teamToReturn = Team(name: teamName, tla: teamTLA , venue: teamVenue, founded: teamFounded, id: teamID)
 
                             teamsToReturn.append(teamToReturn)
                             if(teamsToReturn.count == totalCount){completion(teamsToReturn,"")}

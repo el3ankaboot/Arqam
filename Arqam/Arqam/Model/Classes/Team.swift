@@ -15,13 +15,15 @@ class Team {
     var tla: String
     var venue: String
     var founded : Int
+    var id: Int
     
     //MARK: Init
-    init(name: String , tla: String , venue: String, founded: Int) {
+    init(name: String , tla: String , venue: String, founded: Int, id:Int) {
         self.name = name
         self.tla = tla
         self.venue = venue
         self.founded = founded
+        self.id = id
     }
     
 }

@@ -75,6 +75,7 @@ class FavouriteTeamsViewController : UIViewController,UITableViewDataSource , UI
         detailController.dataController = self.dataController
         detailController.isFavouriteTeam = true
         self.navigationController!.pushViewController(detailController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
     

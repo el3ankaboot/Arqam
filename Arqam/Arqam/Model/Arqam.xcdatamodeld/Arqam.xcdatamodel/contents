@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FavTeam" representedClassName="FavTeam" syncable="YES" codeGenerationType="class">
         <attribute name="founded" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tla" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venue" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,7 +16,7 @@
         <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavTeam" inverseName="members" inverseEntity="FavTeam" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FavTeam" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="FavTeam" positionX="-63" positionY="-18" width="128" height="133"/>
         <element name="FavTeamMember" positionX="170.74609375" positionY="-18.1953125" width="128" height="118"/>
     </elements>
 </model>
