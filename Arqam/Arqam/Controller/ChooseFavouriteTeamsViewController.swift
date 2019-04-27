@@ -73,7 +73,7 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
             
             //check for the returned value
             guard let teamsReturned = teams else {
-                let alertVC = UIAlertController(title: error, message:"Error Loading Premier League Teams", preferredStyle: .alert)
+                let alertVC = UIAlertController(title: error, message:"Error Loading League Teams", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alertVC ,animated: true, completion: nil)
                 return

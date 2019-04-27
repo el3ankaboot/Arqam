@@ -9,6 +9,7 @@
         <relationship name="members" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FavTeamMember" inverseName="team" inverseEntity="FavTeamMember" syncable="YES"/>
     </entity>
     <entity name="FavTeamMember" representedClassName="FavTeamMember" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nationality" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,6 +18,6 @@
     </entity>
     <elements>
         <element name="FavTeam" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="FavTeamMember" positionX="170.74609375" positionY="-18.1953125" width="128" height="118"/>
+        <element name="FavTeamMember" positionX="170.74609375" positionY="-18.1953125" width="128" height="133"/>
     </elements>
 </model>
