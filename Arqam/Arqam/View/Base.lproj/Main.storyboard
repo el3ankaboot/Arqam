@@ -385,13 +385,82 @@
         <!--Competition View Controller-->
         <scene sceneID="KVV-4r-VcJ">
             <objects>
-                <viewController id="dlg-hZ-OgF" customClass="CompetitionViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompetitionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dlg-hZ-OgF" customClass="CompetitionViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YLA-y0-ztv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="vEL-bD-Kv9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compeition Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bif-Rd-3uD">
+                                <rect key="frame" x="100" y="50" width="175" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="c4e-7S-TZE">
+                                <rect key="frame" x="20" y="266" width="335" height="155"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAo-qz-vIh">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                        <color key="backgroundColor" red="0.0040000000000000001" green="0.71541014570000006" blue="0.23407707359999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IKj-eI-2N1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Standings">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="standings:" destination="dlg-hZ-OgF" eventType="touchUpInside" id="mWS-p1-nor"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZB-gl-FYn">
+                                        <rect key="frame" x="0.0" y="115" width="335" height="40"/>
+                                        <color key="backgroundColor" red="0.0040000000000000001" green="0.71541014570000006" blue="0.23407707359999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Top Scorers">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topScorers:" destination="dlg-hZ-OgF" eventType="touchUpInside" id="o70-N2-2iH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bAo-qz-vIh" firstAttribute="width" secondItem="c4e-7S-TZE" secondAttribute="width" id="cBd-qD-deY"/>
+                                    <constraint firstItem="uZB-gl-FYn" firstAttribute="width" secondItem="bAo-qz-vIh" secondAttribute="width" id="eYb-fd-Rke"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bif-Rd-3uD" firstAttribute="top" secondItem="TNv-bJ-c1h" secondAttribute="top" constant="30" id="0AG-eG-Zyg"/>
+                            <constraint firstItem="vEL-bD-Kv9" firstAttribute="leading" secondItem="TNv-bJ-c1h" secondAttribute="leading" id="J09-Yp-ckQ"/>
+                            <constraint firstItem="vEL-bD-Kv9" firstAttribute="top" secondItem="YLA-y0-ztv" secondAttribute="top" id="K9V-Tg-D3T"/>
+                            <constraint firstItem="c4e-7S-TZE" firstAttribute="width" secondItem="YLA-y0-ztv" secondAttribute="width" constant="-40" id="Qnj-Pf-nys"/>
+                            <constraint firstItem="bif-Rd-3uD" firstAttribute="centerX" secondItem="TNv-bJ-c1h" secondAttribute="centerX" id="RQP-vI-lUS"/>
+                            <constraint firstItem="TNv-bJ-c1h" firstAttribute="bottom" secondItem="vEL-bD-Kv9" secondAttribute="bottom" id="Shx-6k-3i7"/>
+                            <constraint firstItem="c4e-7S-TZE" firstAttribute="leading" secondItem="TNv-bJ-c1h" secondAttribute="leading" constant="20" id="bAZ-Ws-EQL"/>
+                            <constraint firstItem="TNv-bJ-c1h" firstAttribute="trailing" secondItem="vEL-bD-Kv9" secondAttribute="trailing" id="cD0-PU-2ue"/>
+                            <constraint firstItem="c4e-7S-TZE" firstAttribute="centerY" secondItem="TNv-bJ-c1h" secondAttribute="centerY" id="qoa-dC-a3d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TNv-bJ-c1h"/>
                     </view>
+                    <connections>
+                        <outlet property="competitonName" destination="bif-Rd-3uD" id="vkq-XE-l5G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVt-T2-kSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

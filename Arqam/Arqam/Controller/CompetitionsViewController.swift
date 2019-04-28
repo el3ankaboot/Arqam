@@ -27,7 +27,6 @@ class CompetitionsViewController : UIViewController, UITableViewDelegate, UITabl
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-        tableView.allowsSelection = false
     }//closing of view did load
     
     //MARK: Setting Table Height According to elements
@@ -52,22 +51,13 @@ class CompetitionsViewController : UIViewController, UITableViewDelegate, UITabl
         leagueCell.clipsToBounds = true
         return leagueCell
     }
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
-//        //Because Last row was clipped.
-//        self.viewWillLayoutSubviews()
-//    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "TeamDetailsViewController") as! TeamDetailsViewController
-//        detailController.theFavouriteTeam = self.favouriteTeams[(indexPath as NSIndexPath).row]
-//        detailController.dataController = self.dataController
-//        detailController.isFavouriteTeam = true
-//        self.navigationController!.pushViewController(detailController, animated: true)
-//        tableView.deselectRow(at: indexPath, animated: false)
-    }
-    
-    
-    
 
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let competitionVC = self.storyboard!.instantiateViewController(withIdentifier: "CompetitionViewController") as! CompetitionViewController
+        competitionVC.competition = leagues[(indexPath as NSIndexPath).row]
+        self.navigationController!.pushViewController(competitionVC, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+
 }//closing of class
 
