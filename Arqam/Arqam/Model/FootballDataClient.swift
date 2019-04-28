@@ -22,6 +22,7 @@ class FootballDataClient {
         //Enum's cases
         case getAllTeams(String)
         case getTeamMembers(Int)
+        case getTopScorers(String)
    
         //String values for enum cases
         var stringValue : String {
@@ -30,6 +31,8 @@ class FootballDataClient {
                 return Endpoints.baseURL + "/competitions/\(league)/teams"
             case .getTeamMembers(let teamID) :
                 return Endpoints.baseURL + "/teams/\(teamID)"
+            case .getTopScorers(let league) :
+                return Endpoints.baseURL + "/competitions/\(league)/scorers?limit=20"
 
             }//closing of switch
         }//closing of stringValue
@@ -44,7 +47,7 @@ class FootballDataClient {
     
     //MARK: Network Requests
     
-    //Get All Teams To Choose Favourite
+    //MARK: Get All Teams To Choose Favourite
     class func getAllTeamsToChooseFavourite (league: String ,completion : @escaping ([Team]? , String) -> Void){
         var teamsToReturn: [Team] = []
         Alamofire.request(Endpoints.getAllTeams(league).url, method: .get, encoding: JSONEncoding.default, headers: ["X-Auth-Token":self.apiToken])
@@ -85,7 +88,7 @@ class FootballDataClient {
         
     }//closing of Get All Teams To Choose Favourite
     
-    //Get Team Members
+    //MARK: Get Team Members
     class func getTeamMembers (teamID: Int ,completion : @escaping ([TeamMember]? , String) -> Void){
         var membersToReturn: [TeamMember] = []
         Alamofire.request(Endpoints.getTeamMembers(teamID).url, method: .get, encoding: JSONEncoding.default, headers: ["X-Auth-Token":self.apiToken])
@@ -124,7 +127,54 @@ class FootballDataClient {
                 }
         }
         
-    }
+    }//closing of get team members
+    
+    //MARK: Get Top scorers
+    class func getTopScorers (league: String ,completion : @escaping ([Scorer]? , String) -> Void){
+        var scorersToReturn: [Scorer] = []
+        Alamofire.request(Endpoints.getTopScorers(league).url, method: .get, encoding: JSONEncoding.default, headers: ["X-Auth-Token":self.apiToken])
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    print("Success")
+                case .failure(_):
+                    completion(nil,"Failed To Retrieve Top Scorers.")
+                    print("Failure")
+                }
+            }
+            .response { response in
+                if let data = response.data {
+                    switch response.response?.statusCode {
+                    case 200 :
+                        let json = JSON(data)
+                        let allScorers = json["scorers"]
+                        let count = json["count"].int ?? 0
+                        for scorerTuple in allScorers{
+                            let scorer = scorerTuple.1
+                            let playerDetails = scorer["player"]
+                            let id = playerDetails["id"].int ?? 0
+                            let name = playerDetails["name"].string ?? "player name"
+                            let nationality = playerDetails["nationality"].string ?? "nationality"
+                            let position = playerDetails["position"].string ?? "position"
+                            let role = playerDetails["role"].string ?? "role"
+                            
+                            let team = scorer["team"]["name"].string ?? "team"
+                            let goals = scorer["numberOfGoals"].int ?? 0
+                            
+                            let scorerToAdd = Scorer(id: id, name: name, nationality: nationality, position: position, role: role, team: team, numberOfGoals: goals)
+                            scorersToReturn.append(scorerToAdd)
+                            if(scorersToReturn.count == count){completion(scorersToReturn,"")}
+                        }
+                        
+
+                    default :
+                        completion(nil ,"Failed To Retrieve Top Scorers.")
+                    }
+                    
+                }
+        }
+        
+    }//closing of get top scorers
     
     
 }//closing of FootballDataClientClass
