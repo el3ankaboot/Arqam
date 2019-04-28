@@ -23,6 +23,7 @@ class FootballDataClient {
         case getAllTeams(String)
         case getTeamMembers(Int)
         case getTopScorers(String)
+        case getStandings(String)
    
         //String values for enum cases
         var stringValue : String {
@@ -33,6 +34,8 @@ class FootballDataClient {
                 return Endpoints.baseURL + "/teams/\(teamID)"
             case .getTopScorers(let league) :
                 return Endpoints.baseURL + "/competitions/\(league)/scorers?limit=20"
+            case.getStandings(let league) :
+                return Endpoints.baseURL + "/competitions/\(league)/standings"
 
             }//closing of switch
         }//closing of stringValue
@@ -176,5 +179,56 @@ class FootballDataClient {
         
     }//closing of get top scorers
     
+    
+    //MARK: Get Standings
+    class func getStandings (league: String ,completion : @escaping ([StandingTeam]? , String) -> Void){
+        var standingToReturn: [StandingTeam] = []
+        Alamofire.request(Endpoints.getStandings(league).url, method: .get, encoding: JSONEncoding.default, headers: ["X-Auth-Token":self.apiToken])
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    print("Success")
+                case .failure(_):
+                    completion(nil,"Failed To Retrieve Standings.")
+                    print("Failure")
+                }
+            }
+            .response { response in
+                if let data = response.data {
+                    switch response.response?.statusCode {
+                    case 200 :
+                        let json = JSON(data)
+                        let count = (json["standings"][0])["table"].count
+                        let standings = (json["standings"][0])["table"]
+                        for standingsTuple in standings {
+                            let standing = standingsTuple.1
+                            let position = standing["position"].int ?? 0
+                            let gamesPlayed = standing["playedGames"].int ?? 0
+                            let won = standing["won"].int ?? 0
+                            let lost = standing["lost"].int ?? 0
+                            let drawn = standing["draw"].int ?? 0
+                            let points = standing["points"].int ?? 0
+                            let goalsFor = standing["goalsFor"].int ?? 0
+                            let goalsAgainst = standing["goalsAgainst"].int ?? 0
+                            let goalsDiff = standing["goalDifference"].int ?? 0
+                            let team = standing["team"]
+                            let teamID = team["id"].int ?? 0
+                            let teamName = team["name"].string ?? ""
+                            
+                            let standingTeam = StandingTeam(pos: position, id: teamID, name: teamName, playedGames: gamesPlayed, w: won, d: drawn, l: lost, pts: points, GF: goalsFor, GA: goalsAgainst, GD: goalsDiff)
+                            standingToReturn.append(standingTeam)
+                            if(standingToReturn.count == count){completion(standingToReturn,"")}
+                            
+                        }
+                        
+                        
+                    default :
+                        completion(nil ,"Failed To Retrieve Standings.")
+                    }
+                    
+                }
+        }
+        
+    }//closing of get top scorers
     
 }//closing of FootballDataClientClass

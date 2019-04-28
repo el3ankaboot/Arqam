@@ -17,6 +17,8 @@
 		5EACC1392275BC7E00C3FC4D /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EACC1382275BC7E00C3FC4D /* PlayerCell.swift */; };
 		5EACC13C2275F5CC00C3FC4D /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EACC13B2275F5CC00C3FC4D /* Scorer.swift */; };
 		5EACC13E2275FCAF00C3FC4D /* TopScorerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EACC13D2275FCAF00C3FC4D /* TopScorerCell.swift */; };
+		5EACC14022760B6D00C3FC4D /* StandingTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EACC13F22760B6D00C3FC4D /* StandingTeam.swift */; };
+		5EACC1422276134400C3FC4D /* StandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EACC1412276134400C3FC4D /* StandingCell.swift */; };
 		5ECCFF8A226F3DCB00480545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCFF89226F3DCB00480545 /* AppDelegate.swift */; };
 		5ECCFF8F226F3DCB00480545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF8D226F3DCB00480545 /* Main.storyboard */; };
 		5ECCFF91226F3DCF00480545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECCFF90226F3DCF00480545 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		5EACC1382275BC7E00C3FC4D /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		5EACC13B2275F5CC00C3FC4D /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
 		5EACC13D2275FCAF00C3FC4D /* TopScorerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScorerCell.swift; sourceTree = "<group>"; };
+		5EACC13F22760B6D00C3FC4D /* StandingTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingTeam.swift; sourceTree = "<group>"; };
+		5EACC1412276134400C3FC4D /* StandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCell.swift; sourceTree = "<group>"; };
 		5ECCFF86226F3DCB00480545 /* Arqam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arqam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECCFF89226F3DCB00480545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECCFF8E226F3DCB00480545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				5E565A1C2270589C00A050C9 /* Team.swift */,
 				5EACC1362274814900C3FC4D /* TeamMember.swift */,
 				5EACC13B2275F5CC00C3FC4D /* Scorer.swift */,
+				5EACC13F22760B6D00C3FC4D /* StandingTeam.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 			children = (
 				5EACC1382275BC7E00C3FC4D /* PlayerCell.swift */,
 				5EACC13D2275FCAF00C3FC4D /* TopScorerCell.swift */,
+				5EACC1412276134400C3FC4D /* StandingCell.swift */,
 			);
 			path = "Customized Cells";
 			sourceTree = "<group>";
@@ -312,7 +318,9 @@
 				5ECCFFA1226F41ED00480545 /* HomepageViewController.swift in Sources */,
 				5EACC1372274814900C3FC4D /* TeamMember.swift in Sources */,
 				5E565A17226F73E700A050C9 /* DataController.swift in Sources */,
+				5EACC1422276134400C3FC4D /* StandingCell.swift in Sources */,
 				5E565A1D2270589C00A050C9 /* Team.swift in Sources */,
+				5EACC14022760B6D00C3FC4D /* StandingTeam.swift in Sources */,
 				5EACC13E2275FCAF00C3FC4D /* TopScorerCell.swift in Sources */,
 				5E565A212270695800A050C9 /* View Extension.swift in Sources */,
 				5ECF8AF922723FB10057E118 /* WelcomeViewController.swift in Sources */,

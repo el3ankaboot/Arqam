@@ -9,9 +9,68 @@
 import Foundation
 import UIKit
 
-class StandingsViewController : UIViewController {
+class StandingsViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    //MARK: Outlets
+    @IBOutlet weak var competitionName: UILabel!
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    @IBOutlet weak var tableView: UITableView!
     
     //MARK: Injections
     var competition: League!
+    
+    //MARK: Instance Variables
+    var teams: [StandingTeam] = []
+    
+    //MARK: View Did Load
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        competitionName.text = self.competition.userValue
+        activity.isHidden = false
+        activity.startAnimating()
+        
+        //Setting TableView
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.isHidden = true
+        
+        getStandings()
+    }
+    
+    //MARK: Network Call to get the standings
+    func getStandings() {
+        FootballDataClient.getStandings(league: competition.rawValue) { (standingsReturned, errMsg) in
+            guard let standings = standingsReturned else {
+                let alertVC = UIAlertController(title: errMsg, message:"Error Loading Standings", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertVC ,animated: true, completion: nil)
+                return
+            }//closing of else of guard let
+            
+            self.teams = standings
+            self.tableView.reloadData()
+            self.tableView.isHidden = false
+            self.activity.stopAnimating()
+            self.activity.isHidden = true
+            
+        }//closing of call to footballdataclient class.
+    }//closing of get standings func
+    
+    //MARK: Table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.teams.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let teamCell = tableView.dequeueReusableCell(withIdentifier: "StandingCell") as! StandingCell
+        teamCell.backgroundColor = UIColor.white
+        teamCell.textLabel?.textColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 1)
+        teamCell.layer.borderWidth = 5
+        teamCell.layer.borderColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 0.6).cgColor
+        teamCell.clipsToBounds = true
+        let team = teams[(indexPath as NSIndexPath).row]
+      
+        
+        return teamCell
+    }
 
 }
