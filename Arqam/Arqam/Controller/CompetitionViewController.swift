@@ -16,19 +16,25 @@ class CompetitionViewController : UIViewController {
     
     
     // MARK:Injections
-    var competition: Leagues!
+    var competition: League!
     
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(competition.userValue)
+        competitonName.text = competition.userValue
     }
     
     //MARK: IBActions
     @IBAction func standings(_ sender: Any) {
+        let standingsVC = self.storyboard!.instantiateViewController(withIdentifier: "StandingsViewController") as! StandingsViewController
+        standingsVC.competition = self.competition
+        self.navigationController!.pushViewController(standingsVC, animated: true)
     }
     
     @IBAction func topScorers(_ sender: Any) {
+        let topScorersVC = self.storyboard!.instantiateViewController(withIdentifier: "TopScorersViewController") as! TopScorersViewController
+        topScorersVC.competition = self.competition
+        self.navigationController!.pushViewController(topScorersVC, animated: true)
     }
     
     

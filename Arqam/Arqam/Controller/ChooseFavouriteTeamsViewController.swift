@@ -88,7 +88,7 @@ class ChooseFavouriteTeamsViewController : UIViewController, UIPickerViewDelegat
     
     //MARK: Choose League Picker View
     var leaguePicker: UIPickerView!
-    var leagues = Leagues.allValues
+    var leagues = League.allValues
     
     func setupPickerView(){
         leaguePicker = UIPickerView()

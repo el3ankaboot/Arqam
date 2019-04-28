@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Leagues : String {
+enum League : String {
     case PremierLeague = "PL"
     case SerieA = "SA"
     case LaLiga = "PD"
@@ -25,10 +25,10 @@ enum Leagues : String {
     
 }
 
-extension Leagues {
-    static var allValues: [Leagues] {
-        var allValues: [Leagues] = []
-        switch (Leagues.PremierLeague) {
+extension League {
+    static var allValues: [League] {
+        var allValues: [League] = []
+        switch (League.PremierLeague) {
         case .PremierLeague: allValues.append(.PremierLeague); fallthrough
         case .LaLiga: allValues.append(.LaLiga); fallthrough
         case .SerieA: allValues.append(.SerieA)

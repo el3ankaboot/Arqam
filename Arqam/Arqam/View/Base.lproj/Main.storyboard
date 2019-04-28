@@ -469,7 +469,7 @@
         <!--Standings View Controller-->
         <scene sceneID="kRz-Pt-txt">
             <objects>
-                <viewController id="pLk-b5-Q6s" customClass="StandingsViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StandingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pLk-b5-Q6s" customClass="StandingsViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="89X-Yw-iCr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -484,7 +484,7 @@
         <!--Top Scorers View Controller-->
         <scene sceneID="Jpn-PM-FdL">
             <objects>
-                <viewController id="TQa-rP-PtT" customClass="TopScorersViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopScorersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TQa-rP-PtT" customClass="TopScorersViewController" customModule="Arqam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZWS-co-fD1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

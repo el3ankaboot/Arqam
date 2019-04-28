@@ -11,4 +11,7 @@ import UIKit
 
 class TopScorersViewController : UIViewController {
     
+    //MARK: Injections
+    var competition: League!
+    
 }

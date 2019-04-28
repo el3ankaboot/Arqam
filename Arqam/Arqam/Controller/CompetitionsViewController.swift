@@ -17,7 +17,7 @@ class CompetitionsViewController : UIViewController, UITableViewDelegate, UITabl
     
     
     //MARK: Instance Variables
-    var leagues = Leagues.allValues
+    var leagues = League.allValues
     
     //MARK: View Did Load
     override func viewDidLoad() {

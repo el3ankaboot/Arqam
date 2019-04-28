@@ -11,4 +11,7 @@ import UIKit
 
 class StandingsViewController : UIViewController {
     
+    //MARK: Injections
+    var competition: League!
+
 }
