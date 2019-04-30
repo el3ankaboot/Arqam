@@ -910,9 +910,9 @@
                             <constraint firstItem="hJI-c0-IAx" firstAttribute="top" secondItem="tyQ-7a-YDD" secondAttribute="bottom" constant="30" id="3aL-my-dy8"/>
                             <constraint firstItem="kTk-U3-K7A" firstAttribute="centerX" secondItem="tyQ-7a-YDD" secondAttribute="centerX" id="5Dk-x9-FB4"/>
                             <constraint firstItem="hJI-c0-IAx" firstAttribute="width" secondItem="4Nz-x0-qVw" secondAttribute="width" id="8eE-8k-dDo"/>
-                            <constraint firstItem="tyQ-7a-YDD" firstAttribute="top" secondItem="xUd-Pu-auq" secondAttribute="top" constant="170" id="Ldw-cw-eDc"/>
                             <constraint firstItem="tyQ-7a-YDD" firstAttribute="centerX" secondItem="xUd-Pu-auq" secondAttribute="centerX" id="Uuz-oX-z0b"/>
                             <constraint firstItem="kTk-U3-K7A" firstAttribute="width" secondItem="4Nz-x0-qVw" secondAttribute="width" constant="-20" id="WGV-S0-pMl"/>
+                            <constraint firstItem="kTk-U3-K7A" firstAttribute="top" secondItem="hJI-c0-IAx" secondAttribute="bottom" constant="32.5" id="lRD-XR-S1c"/>
                             <constraint firstItem="hJI-c0-IAx" firstAttribute="leading" secondItem="xUd-Pu-auq" secondAttribute="leading" id="yK2-zJ-BWz"/>
                             <constraint firstItem="kTk-U3-K7A" firstAttribute="centerY" secondItem="xUd-Pu-auq" secondAttribute="centerY" id="yvd-CT-IAC"/>
                         </constraints>
