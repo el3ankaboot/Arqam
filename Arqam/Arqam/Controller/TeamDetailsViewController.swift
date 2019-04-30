@@ -74,6 +74,8 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
                 let int32ID: Int32 = theFavouriteTeam?.id ?? 0
                 FootballDataClient.getTeamMembers(teamID: Int(int32ID)) { (teamMembersReturned, errMsg) in
                     guard let myTeamMembers = teamMembersReturned else {
+                        self.activity.isHidden = true
+                        self.activity.stopAnimating()
                         let alertVC = UIAlertController(title: errMsg, message:"Error Loading Team Staff", preferredStyle: .alert)
                         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                         self.present(alertVC ,animated: true, completion: nil)
@@ -107,6 +109,10 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
     //MARK:Get team which is not favourite
     func getTeamDetails(){
         FootballDataClient.getTeamMembers(teamID: self.teamId) { (teamMembersReturned, errMsg) in
+            //Hiding activity indicator
+            self.activity.isHidden = true
+            self.activity.stopAnimating()
+            
             guard let myTeamMembers = teamMembersReturned else {
                 let alertVC = UIAlertController(title: errMsg, message:"Error Loading Team Staff", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -117,8 +123,7 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
             self.sortTeamMembers() //manager - goalkeepers - defenders - midfielders - attackers
             self.tableView.reloadData()
             self.tableView.isHidden = false
-            self.activity.isHidden = true
-            self.activity.stopAnimating()
+       
         }
         
     }

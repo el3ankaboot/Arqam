@@ -41,6 +41,10 @@ class TopScorersViewController : UIViewController, UITableViewDelegate, UITableV
     //MARK: Network call to get the top scorers
     func getTopScorers(){
         FootballDataClient.getTopScorers(league: competition.rawValue) { (topScorersReturned, errMsg) in
+            //Hide activity indicator
+            self.activity.isHidden = true
+            self.activity.stopAnimating()
+            
             guard let topScorers = topScorersReturned else {
                 let alertVC = UIAlertController(title: errMsg, message:"Error Loading Top Scorers", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -53,9 +57,7 @@ class TopScorersViewController : UIViewController, UITableViewDelegate, UITableV
             self.tableView.isHidden = false
             self.tableView.reloadData()
             
-            //Hide activity indicator
-            self.activity.isHidden = true
-            self.activity.stopAnimating()
+            
         }//closing of call to client
     }//closing of func getTopScorers
     

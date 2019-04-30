@@ -40,6 +40,11 @@ class StandingsViewController : UIViewController, UITableViewDataSource, UITable
     //MARK: Network Call to get the standings
     func getStandings() {
         FootballDataClient.getStandings(league: competition.rawValue) { (standingsReturned, errMsg) in
+            //Hiding the activity indicator
+            self.activity.stopAnimating()
+            self.activity.isHidden = true
+            
+            
             guard let standings = standingsReturned else {
                 let alertVC = UIAlertController(title: errMsg, message:"Error Loading Standings", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -51,8 +56,7 @@ class StandingsViewController : UIViewController, UITableViewDataSource, UITable
             
             self.tableView.reloadData()
             self.tableView.isHidden = false
-            self.activity.stopAnimating()
-            self.activity.isHidden = true
+
             
         }//closing of call to footballdataclient class.
     }//closing of get standings func
