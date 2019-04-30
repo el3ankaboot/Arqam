@@ -94,7 +94,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Aei-Ka-dqt">
-                                <rect key="frame" x="37.5" y="110" width="300" height="200"/>
+                                <rect key="frame" x="37.5" y="74.5" width="300" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="78M-9Q-Np4"/>
                                     <constraint firstAttribute="width" constant="300" id="y39-vY-z4f"/>
@@ -107,10 +107,10 @@
                             <constraint firstItem="Aei-Ka-dqt" firstAttribute="centerX" secondItem="pFv-cw-iCp" secondAttribute="centerX" id="Ksg-XC-zoI"/>
                             <constraint firstItem="toc-k5-JH6" firstAttribute="centerY" secondItem="pFv-cw-iCp" secondAttribute="centerY" id="Lb6-Ut-6F1"/>
                             <constraint firstItem="ylR-Aw-S9y" firstAttribute="top" secondItem="ipF-VO-I3l" secondAttribute="top" id="OqZ-pP-cb0"/>
+                            <constraint firstItem="toc-k5-JH6" firstAttribute="top" secondItem="Aei-Ka-dqt" secondAttribute="bottom" constant="10" id="TWC-A6-G1R"/>
                             <constraint firstItem="toc-k5-JH6" firstAttribute="centerX" secondItem="pFv-cw-iCp" secondAttribute="centerX" id="TZ5-o4-hRr"/>
                             <constraint firstItem="pFv-cw-iCp" firstAttribute="bottom" secondItem="ylR-Aw-S9y" secondAttribute="bottom" id="V1M-5b-vVd"/>
                             <constraint firstItem="toc-k5-JH6" firstAttribute="width" secondItem="pFv-cw-iCp" secondAttribute="width" id="duI-DJ-xZT"/>
-                            <constraint firstItem="Aei-Ka-dqt" firstAttribute="top" secondItem="pFv-cw-iCp" secondAttribute="top" constant="46" id="fdJ-eG-bu4"/>
                             <constraint firstItem="pFv-cw-iCp" firstAttribute="trailing" secondItem="ylR-Aw-S9y" secondAttribute="trailing" id="kUL-og-FuQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pFv-cw-iCp"/>
@@ -1011,6 +1011,7 @@
                             <constraint firstItem="sM5-yw-6b3" firstAttribute="leading" secondItem="RC2-nU-HEL" secondAttribute="leading" constant="25" id="HoA-rv-BUZ"/>
                             <constraint firstItem="sM5-yw-6b3" firstAttribute="top" secondItem="pSw-dC-yTW" secondAttribute="bottom" constant="8" id="Rp5-TF-IwB"/>
                             <constraint firstItem="RC2-nU-HEL" firstAttribute="trailing" secondItem="sM5-yw-6b3" secondAttribute="trailing" constant="25" id="XcJ-iH-keb"/>
+                            <constraint firstItem="mw1-SY-f9z" firstAttribute="leading" secondItem="pSw-dC-yTW" secondAttribute="trailing" constant="4" id="Y8y-eY-iza"/>
                             <constraint firstItem="RC2-nU-HEL" firstAttribute="trailing" secondItem="mw1-SY-f9z" secondAttribute="trailing" constant="11" id="buc-Cl-DRM"/>
                             <constraint firstItem="pSw-dC-yTW" firstAttribute="top" secondItem="RC2-nU-HEL" secondAttribute="top" constant="30" id="d2C-l7-nO2"/>
                             <constraint firstItem="RC2-nU-HEL" firstAttribute="trailing" secondItem="Z1E-Lj-Cj1" secondAttribute="trailing" id="faP-pn-WKf"/>
