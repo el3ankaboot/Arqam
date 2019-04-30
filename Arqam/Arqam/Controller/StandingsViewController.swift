@@ -48,6 +48,7 @@ class StandingsViewController : UIViewController, UITableViewDataSource, UITable
             }//closing of else of guard let
             
             self.teams = standings
+            
             self.tableView.reloadData()
             self.tableView.isHidden = false
             self.activity.stopAnimating()
@@ -68,7 +69,7 @@ class StandingsViewController : UIViewController, UITableViewDataSource, UITable
         teamCell.layer.borderColor = UIColor(red: 0.0, green: 0.715, blue: 0.226, alpha: 0.6).cgColor
         teamCell.clipsToBounds = true
         let team = teams[(indexPath as NSIndexPath).row]
-      
+      teamCell.initializeCell(rank: team.position, teamName: team.name, played: team.playedGames, wins: team.won, draws: team.drawn, losses: team.lost, points: team.points, goalsFor: team.goalsFor, goalsAgainst: team.goalsAgainst, goalsDiff: team.goalsDifference)
         
         return teamCell
     }

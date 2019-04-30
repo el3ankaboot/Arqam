@@ -562,6 +562,14 @@
                                                                 <constraint firstAttribute="trailing" secondItem="vll-ml-QIC" secondAttribute="trailing" constant="10" id="RBD-rR-lLx"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="goalsDiff" destination="ecL-zv-853" id="fm3-nR-PEL"/>
+                                                            <outlet property="goalsForAgainst" destination="tyZ-zO-db9" id="Hld-Dq-hyD"/>
+                                                            <outlet property="played" destination="iLH-KF-EKa" id="Rb3-Hb-uLl"/>
+                                                            <outlet property="points" destination="ww1-r0-fMH" id="QwS-8B-Wel"/>
+                                                            <outlet property="rankAndName" destination="UWi-17-BVU" id="U3W-mp-o68"/>
+                                                            <outlet property="winDrawLoss" destination="2a2-s1-d27" id="srv-NY-SwD"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
                                                 <userDefinedRuntimeAttributes>
