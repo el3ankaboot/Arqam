@@ -55,6 +55,7 @@ And the available features are :
 #### Updates for next version
 For next version this updates will be done :
 * Update the UI design of the application.
+* New Logo and AppIcon.
 * Add Bundesliga and Ligue 1.
 * Show more details about the players.
 
