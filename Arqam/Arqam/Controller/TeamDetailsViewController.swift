@@ -16,14 +16,19 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
     var dataController : DataController!
     var theFavouriteTeam : FavTeam!
     var isFavouriteTeam : Bool!
+    var teamId: Int!
     
     //MARK: Outlets
     @IBOutlet weak var teamName: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: Instance Variables
+    //In case of favourite team
     var favTeamMembers: [FavTeamMember] = []
+    //In case of team
+    var teamMembers: [TeamMember] = []
     @IBOutlet weak var activity: UIActivityIndicatorView!
+   
     
     //MARK: View Did Load
     override func viewDidLoad() {
@@ -34,21 +39,24 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.allowsSelection = false
+        tableView.isHidden = true
+        
+        //Show activity indicator
+        activity.isHidden = false
+        activity.startAnimating()
         
         //Fetch CoreData
         if(isFavouriteTeam){
             teamName.text = theFavouriteTeam.name
-            activity.isHidden = false
-            activity.startAnimating()
             fetchFavourite()
         }
-        sortTeamMembers() //manager - goalkeepers - defenders - midfielders - attackers
-        tableView.reloadData()
-        activity.isHidden = true
-        activity.stopAnimating()
+        else {
+            getTeamDetails()
+        }
+
     }//closing of view did load
     
-    //MARK: Fetch CoreData
+    //MARK: Get Favourite Team
     func fetchFavourite(){
         let fetchRequest : NSFetchRequest<FavTeamMember> = FavTeamMember.fetchRequest()
         let predicate = NSPredicate(format: "team == %@", theFavouriteTeam)
@@ -56,6 +64,11 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
         if let result = try? dataController.viewContext.fetch(fetchRequest) {
             if result.count > 0 {
                 favTeamMembers = result
+                sortTeamMembers() //manager - goalkeepers - defenders - midfielders - attackers
+                tableView.reloadData()
+                tableView.isHidden = false
+                activity.isHidden = true
+                activity.stopAnimating()
             }
             else { //First time , so get members from the API.
                 let int32ID: Int32 = theFavouriteTeam?.id ?? 0
@@ -80,12 +93,35 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
                         self.favTeamMembers.append(favTeamMember)
                     }
                     try? self.dataController.viewContext.save()     //Saving to context
-                    
+                    self.sortTeamMembers() //manager - goalkeepers - defenders - midfielders - attackers
+                    self.tableView.reloadData()
+                    self.tableView.isHidden = false
+                    self.activity.isHidden = true
+                    self.activity.stopAnimating()
                 }//closing of network call
             }//closing of else (to get members from API that are not in CoreData).
             
         }//end of if let
     }//end of fetch favourite func
+    
+    //MARK:Get team which is not favourite
+    func getTeamDetails(){
+        FootballDataClient.getTeamMembers(teamID: self.teamId) { (teamMembersReturned, errMsg) in
+            guard let myTeamMembers = teamMembersReturned else {
+                let alertVC = UIAlertController(title: errMsg, message:"Error Loading Team Staff", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertVC ,animated: true, completion: nil)
+                return
+            }//closing of guard let
+            self.teamMembers = myTeamMembers
+            self.sortTeamMembers() //manager - goalkeepers - defenders - midfielders - attackers
+            self.tableView.reloadData()
+            self.tableView.isHidden = false
+            self.activity.isHidden = true
+            self.activity.stopAnimating()
+        }
+        
+    }
     
     //MARK: SortTeam
     func sortTeamMembers(){
@@ -111,11 +147,36 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
             favTeamMembers.append(contentsOf: favAttackers)
             
         }//closing of favourite team
+        else {
+            var manager = TeamMember(id: 0, name: "", nationality: "", position: "", role: "")
+            var goalies: [TeamMember] = []
+            var defenders: [TeamMember] = []
+            var mids: [TeamMember] = []
+            var attackers: [TeamMember] = []
+            
+            for teamMember in teamMembers {
+                if teamMember.role == "COACH" {manager = teamMember}
+                else if teamMember.position == "Goalkeeper" {goalies.append(teamMember)}
+                else if teamMember.position == "Defender" {defenders.append(teamMember)}
+                else if teamMember.position == "Midfielder" {mids.append(teamMember)}
+                else {attackers.append(teamMember)}
+            }
+            teamMembers = []
+            teamMembers.append(manager)
+            teamMembers.append(contentsOf: goalies)
+            teamMembers.append(contentsOf: defenders)
+            teamMembers.append(contentsOf: mids)
+            teamMembers.append(contentsOf: attackers)
+            
+            
+            
+        }//closing of non-fav team
     }
     
     //MARK: Table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.favTeamMembers.count
+        if(isFavouriteTeam){return self.favTeamMembers.count}
+        else{return self.teamMembers.count}
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let teamMemberCell = tableView.dequeueReusableCell(withIdentifier: "playerCell") as! PlayerCell
@@ -129,6 +190,13 @@ class TeamDetailsViewController : UIViewController, UITableViewDataSource, UITab
             teamMemberCell.name.text = teamMember.name
             teamMemberCell.nationality.text = teamMember.nationality
             teamMemberCell.position.text = (teamMember.role == "COACH") ? teamMember.role : teamMember.position
+        }
+        else {
+            let teamMember = teamMembers[(indexPath as NSIndexPath).row]
+            teamMemberCell.name.text = teamMember.name
+            teamMemberCell.nationality.text = teamMember.nationality
+            teamMemberCell.position.text = (teamMember.role == "COACH") ? teamMember.role :
+                teamMember.position
             
         }
         

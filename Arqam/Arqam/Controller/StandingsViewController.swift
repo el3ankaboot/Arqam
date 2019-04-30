@@ -73,5 +73,12 @@ class StandingsViewController : UIViewController, UITableViewDataSource, UITable
         
         return teamCell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let teamDetailsVC = self.storyboard!.instantiateViewController(withIdentifier: "TeamDetailsViewController") as! TeamDetailsViewController
+        teamDetailsVC.teamId = teams[(indexPath as NSIndexPath).row].id
+        teamDetailsVC.isFavouriteTeam = false
+        self.navigationController!.pushViewController(teamDetailsVC, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 
 }
